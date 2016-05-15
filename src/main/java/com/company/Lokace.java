@@ -52,6 +52,14 @@ public class Lokace {
         return bytost;
     }
 
+    public String serialize () {
+        Hrdina hrdina = new Hrdina();
+        Mapa mapa = new Mapa(hrdina);
+        Pozice aktualniPozice = mapa.getAktualniPozice();
+        int x = aktualniPozice.getX();
+        int y = aktualniPozice.getY();
+    }
+
     public void vypis() {
         if (!predmety.isEmpty()) {
             System.out.println("v místnosti je");

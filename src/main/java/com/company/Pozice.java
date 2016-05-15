@@ -38,12 +38,20 @@ public class Pozice {
         return result;
     }
 
+    public int serialize () {
+        Hrdina hrdina = new Hrdina();
+        Mapa mapa = new Mapa(hrdina);
+        Pozice aktualniPozice = mapa.getAktualniPozice();
+        return aktualniPozice.getX() + aktualniPozice.getY();
+    }
+
     public int getX() {
         return x;
     }
     public int getY() {
         return y;
     }
+
 }
 
 

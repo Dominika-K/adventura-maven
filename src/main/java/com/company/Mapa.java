@@ -92,6 +92,10 @@ public class Mapa {
        return povolenePozice.get(aktualniPozice);
     }
 
+    public Pozice getAktualniPozice() {
+        return aktualniPozice;
+    }
+
     public void setAktualniPozice(Pozice aktualniPozice) {
         this.aktualniPozice = aktualniPozice;
     }
