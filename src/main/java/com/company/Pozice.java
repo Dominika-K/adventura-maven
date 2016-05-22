@@ -38,11 +38,10 @@ public class Pozice {
         return result;
     }
 
-    public int serialize () {
-        Hrdina hrdina = new Hrdina();
-        Mapa mapa = new Mapa(hrdina);
-        Pozice aktualniPozice = mapa.getAktualniPozice();
-        return aktualniPozice.getX() + aktualniPozice.getY();
+    public String serialize () {
+        String result = "";
+        result += getX() + ","+ getY(); //postupné spojování řetězce
+        return result;
     }
 
     public int getX() {

@@ -27,6 +27,12 @@ public class Inventar { /*tělo třídy*/
         predmety.remove(vec);
     }
 
+    public String serialize () {
+        String result = "";
+        result += this.getPredmety();
+        return result;
+    }
+
 
     public Inventar(){
         predmety= new ArrayList();

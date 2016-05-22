@@ -5,6 +5,7 @@ import com.company.akce.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Vydra řičné on 14. 2. 2016.
@@ -86,8 +87,15 @@ public class Mapa {
         }
     }
 
-
-
+    public String serialize () {
+        String result = "";
+        for(Map.Entry<Pozice, Lokace> lokace: povolenePozice.entrySet()) { //v hranatých závorkách - klíč a zámek
+            result += lokace.getKey().serialize();
+            result += lokace.getValue().serialize();
+        }
+        result += "\n" + "aktualni pozice: " + aktualniPozice.serialize(); //\n - konec řádku
+        return  result;
+    }
     public Lokace getAktualniLokace (){
        return povolenePozice.get(aktualniPozice);
     }

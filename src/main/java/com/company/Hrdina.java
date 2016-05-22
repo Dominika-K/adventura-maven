@@ -12,6 +12,13 @@ public class Hrdina extends Bytost {
         inventar = new Inventar();
     }
 
+    public String serialize () {
+
+        String result = "";
+        result += "\n"+" HRDINA: Inventar: "+ getInventar().serialize() + " Zivoty: " +  getZivoty()+ " utok: "+ getUtok() + " obrana: " + getObrana();
+        return result;
+    }
+
 
     public Inventar getInventar() {
         return inventar;

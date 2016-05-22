@@ -8,8 +8,10 @@ import org.junit.Test;
  */
 public class UlozTest {
     @Test
-    public void UlozTest(){
-        Uloz testovana = new Uloz();
-        testovana.proveď(new String[]{"ulož"});
+    public void UlozTest() throws Exception {
+        Hrdina hrdina = new Hrdina();
+        Mapa mapa = new Mapa(hrdina);
+        Uloz testovana = new Uloz(hrdina, mapa);
+        testovana.proveď(new String[]{"ulož","ulož1"});
     }
 }

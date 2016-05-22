@@ -53,11 +53,10 @@ public class Lokace {
     }
 
     public String serialize () {
-        Hrdina hrdina = new Hrdina();
-        Mapa mapa = new Mapa(hrdina);
-        Pozice aktualniPozice = mapa.getAktualniPozice();
-        int x = aktualniPozice.getX();
-        int y = aktualniPozice.getY();
+
+        String result = ""; //"" - funguje jako new string
+        result += "" + predmety + povoleneAkce + bytost + "\n";
+        return result;
     }
 
     public void vypis() {
