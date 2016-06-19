@@ -40,7 +40,7 @@ public class Pozice {
 
     public String serialize () {
         String result = "";
-        result += getX() + ","+ getY(); //postupné spojování řetězce
+        result += "Lokace " + getX() + ","+ getY(); //postupné spojování řetězce
         return result;
     }
 

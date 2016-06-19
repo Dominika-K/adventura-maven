@@ -92,7 +92,7 @@ public class Mapa {
         for(Map.Entry<Pozice, Lokace> lokace: povolenePozice.entrySet()) { //v hranatých závorkách - klíč a zámek
             result += lokace.getKey().serialize();
             result += lokace.getValue().serialize();
-        }
+        } //Entry set vrací množinu obsahující klíč a hodnotu
         result += "\n" + "aktualni pozice: " + aktualniPozice.serialize(); //\n - konec řádku
         return  result;
     }

@@ -29,6 +29,10 @@ public class Lokace {
         this.bytost = bytost;
     }
 
+    public Lokace (String deserialize){
+
+    }
+
 
     public boolean jdeProvest(String akce) {
         return povoleneAkce.contains(akce);
