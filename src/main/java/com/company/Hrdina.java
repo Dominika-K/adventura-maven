@@ -15,7 +15,7 @@ public class Hrdina extends Bytost {
     public String serialize () {
 
         String result = "";
-        result += "\n"+" HRDINA: Inventar: "+ getInventar().serialize() + " Zivoty: " +  getZivoty()+ " utok: "+ getUtok() + " obrana: " + getObrana();
+        result += "HRDINA: #Inventar:#"+ getInventar().serialize() + "#Zivoty:#" +  getZivoty()+ "#utok:#"+ getUtok() + "#obrana:#" + getObrana() + "\n";
         return result;
     }
 

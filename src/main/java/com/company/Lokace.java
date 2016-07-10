@@ -1,5 +1,7 @@
 package com.company;
 
+import javafx.util.converter.IntegerStringConverter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,8 +61,14 @@ public class Lokace {
     public String serialize () {
 
         String result = ""; //"" - funguje jako new string
-        result += "" + predmety + povoleneAkce + bytost + "\n";
+        result += "" + "#" + predmety+"#" + povoleneAkce+"#" + bytost+"#" + "\n";
         return result;
+    }
+    public static Lokace deserialize (String line){
+       String [] lokline = line.split("#"); //parametrem rozdělovač - rozdělí řetezec na části
+       String [] radek = lokline[0].split(", ");
+        Lokace lokace = Lokace.deserialize(line);
+        return null;
     }
 
     public void vypis() {

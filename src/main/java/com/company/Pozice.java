@@ -40,8 +40,14 @@ public class Pozice {
 
     public String serialize () {
         String result = "";
-        result += "Lokace " + getX() + ","+ getY(); //postupné spojování řetězce
+        result += "Lokace " + "#" + getX() + "#"+ getY(); //postupné spojování řetězce
         return result;
+    }
+
+    public static Pozice deserialize(String line){
+        String [] lokline = line.split("#"); //parametrem rozdělovač - rozdělí řetezec na části
+        Pozice pozice = new Pozice (Integer.parseInt(lokline[2]),Integer.parseInt(lokline[3]));
+        return pozice;
     }
 
     public int getX() {

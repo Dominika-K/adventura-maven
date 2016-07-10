@@ -93,7 +93,7 @@ public class Mapa {
             result += lokace.getKey().serialize();
             result += lokace.getValue().serialize();
         } //Entry set vrací množinu obsahující klíč a hodnotu
-        result += "\n" + "aktualni pozice: " + aktualniPozice.serialize(); //\n - konec řádku
+        result += "\n" + "aktualni-pozice:" + "#" +aktualniPozice.serialize(); //\n - konec řádku
         return  result;
     }
     public Lokace getAktualniLokace (){

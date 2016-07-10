@@ -23,7 +23,7 @@ import java.util.Scanner;
     public void proveď (String[] parametry){
        try {
        FileWriter fw =  new FileWriter (parametry[1]+ ".txt"); //relativní cesta
-       fw.write(mapa.serialize()+hrdina.serialize()); //append připíše  do souboru, write to přepíše, potřeba vědět v jakém stavu hrdina a stav lokací
+       fw.write(hrdina.serialize() + mapa.serialize()); //append připíše  do souboru, write to přepíše, potřeba vědět v jakém stavu hrdina a stav lokací
        fw.flush(); //není u ulož
        fw.close();
        }catch(Exception e){ //Exeption - typ výjimky, kterou zachytáváme, e je jméno, pomocí kterého ji můžeme adresovat uvnitř catch bloku

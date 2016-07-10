@@ -1,5 +1,7 @@
 package com.company.akce;
 
+import com.company.Lokace;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 
@@ -10,23 +12,27 @@ public class Nacti extends Akce {
     public Nacti() {
         super("Načti", 1);
     }
-    public void proveď (String[] parametry){
+
+    public void proveď(String[] parametry) {
         try {
             FileReader fr = new FileReader(parametry[1] + ".txt");
             BufferedReader bf = new BufferedReader(fr);
             bf.lines();
             String line = new String();
-            while ((line = bf.readLine())!=null){
+            while ((line = bf.readLine()) != null) {
                 System.out.println(line);
             }
             bf.close();
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public void deserialize(){
+
+    public void deserialize(String line) {
+        if (line.startsWith("Lokace")) {
+            Lokace lokace = Lokace.deserialize(line);
+        }
 
     }
-
 }
